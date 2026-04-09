@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AI Music Pro</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- AUTH -->
+<div id="authPanel" class="auth-panel">
+  <h2>🎧 Login</h2>
+
+  <input id="username" placeholder="Username">
+  <input id="password" type="password" placeholder="Password">
+
+  <button onclick="login()">Login</button>
+  <button onclick="register()">Register</button>
+  <button onclick="toggleAuth()">Close ✖</button>
+</div>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <h2>🎵 AI Music Studio</h2>
+
+  <div class="top-actions">
+    <button onclick="toggleAuth()">👤 Login</button>
+    <button onclick="window.location.href='scan.html'">📸 Scan</button>
+    <button onclick="window.location.href='history.html'">📜 History</button>
+
+    <!-- PREMIUM PROFILE -->
+    <div id="profileBox"></div>
+  </div>
+</div>
+
+<!-- MAIN APP -->
+<div class="container">
+
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+
+    <h3>🎭 Moods</h3>
+
+    <div class="mood">
+      <div onclick="getMood('happy')">😊 Happy</div>
+      <div onclick="getMood('sad')">😢 Sad</div>
+      <div onclick="getMood('love')">❤️ Love</div>
+      <div onclick="getMood('party')">🥳 Party</div>
+      <div onclick="getMood('lofi')">🌙 Lofi</div>
+      <div onclick="getMood('study')">📚 Study</div>
+      <div onclick="getMood('calm')">🧘 Calm</div>
+      <h3 onclick="goToHistory()" style="cursor:pointer;">📜 History</h3>
+    </div>
+
+  </div>
+
+  <!-- MAIN -->
+  <div class="main">
+
+    <h1>Discover Music 🎶</h1>
+
+    <div class="search">
+      <input id="searchInput" placeholder="Search music..." />
+      <button onclick="searchSong()">🔍</button>
+    </div>
+
+    <div id="player"></div>
+
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
